@@ -54,4 +54,5 @@ systemctl daemon-reload && systemctl start alertmanager && systemctl enable aler
 #ss -tnlp
 
 #Установить node_exporter
+cd /home/adminroot/dz_prometheus
 ./node_exporter.sh

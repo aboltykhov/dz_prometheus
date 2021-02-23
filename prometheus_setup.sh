@@ -66,6 +66,6 @@ systemctl daemon-reload && systemctl enable prometheus && systemctl start promet
 #ss -tnlp
 
 #Установить Alertmanager
+cd /home/adminroot/dz_prometheus
 ./alertm_setup.sh
-
 

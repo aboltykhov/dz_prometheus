@@ -49,5 +49,6 @@ systemctl daemon-reload && systemctl enable node_exporter && systemctl start nod
 #ss -tnlp
 
 #Установить targets_с_node_exporter_в_prometheus
+cd /home/adminroot/dz_prometheus
 ./targets_node.sh
 
