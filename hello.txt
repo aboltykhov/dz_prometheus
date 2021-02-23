@@ -1,0 +1,31 @@
+
+
+Hello Al Bo!
+
+#######################################
+# Пример:
+# Чтобы скачать репозиторий dz_prometheus
+#######################################
+pwd
+ll
+mkdir dz_prometheus
+cd dz_prometheus
+git init
+git remote add origin git@github.com:aboltykhov/dz_prometheus.git
+git pull origin main && ll
+
+#######################################
+# Пример:
+# Чтобы отправить dz_prometheus
+#######################################
+pwd
+ls -l
+git add .
+git commit -m "Добавлен файл инструкциий для репозитория dz_prometheus"
+git branch -M main 
+git push -u origin main 
+
+#######################################
+# И т.д.
+#
+#######################################
