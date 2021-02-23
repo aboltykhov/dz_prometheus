@@ -2,6 +2,7 @@
 
 #!/bin/bash
 yum install -y wget
+cd /tmp/
 wget https://github.com/prometheus/node_exporter/releases/download/v1.0.1/node_exporter-1.0.1.linux-amd64.tar.gz
 
 #Распакуем архив
@@ -45,6 +46,8 @@ chown -R nodeusr:nodeusr /usr/local/bin/node_exporter
 systemctl daemon-reload && systemctl enable node_exporter && systemctl start node_exporter 
 
 #Показать порты
-ss -tnlp
+#ss -tnlp
 
+#Установить targets_с_node_exporter_в_prometheus
+./targets_node.sh
 

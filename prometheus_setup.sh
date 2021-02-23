@@ -12,7 +12,7 @@ EOF
 chmod 600 /etc/ssh/ssh_config.d/github.com.conf
 #####################################################################
 yum install -y wget
-cd /home/adminroot
+cd /tmp/
 wget https://github.com/prometheus/prometheus/releases/download/v2.20.1/prometheus-2.20.1.linux-amd64.tar.gz
 
 #Создаем каталоги в которые затем скопируем файлы для prometheus
@@ -63,5 +63,9 @@ chown -R prometheus:prometheus /var/lib/prometheus
 systemctl daemon-reload && systemctl enable prometheus && systemctl start prometheus
 
 #Показать порты
-ss -tnlp
+#ss -tnlp
+
+#Установить Alertmanager
+./alertm_setup.sh
+
 

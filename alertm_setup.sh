@@ -2,7 +2,7 @@
 
 #!/bin/bash
 yum install -y wget
-cd /home/adminroot
+cd /tmp/
 wget https://github.com/prometheus/alertmanager/releases/download/v0.21.0/alertmanager-0.21.0.linux-amd64.tar.gz
 
 #Создать каталоги для alertmanager
@@ -51,5 +51,7 @@ EOF
 systemctl daemon-reload && systemctl start alertmanager && systemctl enable alertmanager 
 
 #Показать порты
-ss -tnlp
+#ss -tnlp
 
+#Установить node_exporter
+./node_exporter.sh
