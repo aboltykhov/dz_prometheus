@@ -1,6 +1,16 @@
 
 
 #!/bin/bash
+#Создать файл ssh ключей для github.com в автозапуске
+cat <<EOF >> /etc/ssh/ssh_config.d/github.com.conf
+Host github.com
+    HostName github.com
+    IdentityFile /etc/ssh/ssh_host_rsa_key
+EOF
+
+#Права на файл ключей ssh
+chmod 600 /etc/ssh/ssh_config.d/github.com.conf
+#####################################################################
 yum install -y wget
 cd /home/adminroot
 wget https://github.com/prometheus/prometheus/releases/download/v2.20.1/prometheus-2.20.1.linux-amd64.tar.gz
